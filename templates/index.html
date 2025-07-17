@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Barrio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS (opcional para diseño rápido) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap @5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-color: #28a745;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .nav-card {
+            transition: transform 0.2s;
+        }
+        .nav-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="display-4">Bienvenido a Tu Tienda de Barrio</h1>
+        <p class="lead">Sistema de gestión integral para administradores y vendedores</p>
+    </section>
+
+    <!-- Menú de Navegación -->
+    <div class="container mt-5">
+        <div class="row g-4">
+
+            <!-- Registro de Clientes -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Clientes</h5>
+                        <p class="card-text">Registrar, editar y ver listado de clientes.</p>
+                        <a href="{{ url_for('registrar_cliente') }}" class="btn btn-primary">Ir a Clientes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestión de Productos -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Productos</h5>
+                        <p class="card-text">Agregar y gestionar inventario de productos.</p>
+                        <a href="{{ url_for('lista_productos') }}" class="btn btn-success">Ir a Productos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registro de Ventas -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ventas</h5>
+                        <p class="card-text">Registrar nuevas ventas con uno o más productos.</p>
+                        <a href="{{ url_for('registrar_venta') }}" class="btn btn-info text-white">Registrar Venta</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reportes -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Reportes</h5>
+                        <p class="card-text">Ver reportes de ventas y estadísticas del negocio.</p>
+                        <a href="{{ url_for('reportes') }}" class="btn btn-warning">Ver Reportes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compras a Proveedores -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Compras</h5>
+                        <p class="card-text">Registrar compras realizadas a proveedores.</p>
+                        <a href="{{ url_for('registrar_compra') }}" class="btn btn-secondary">Registrar Compra</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consulta de Stock -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stock</h5>
+                        <p class="card-text">Consultar disponibilidad actual de productos.</p>
+                        <a href="{{ url_for('consultar_stock') }}" class="btn btn-danger">Consultar Stock</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5 py-3 bg-light text-center">
+        <p class="mb-0">&copy; 2025 Tienda de Barrio - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap @5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
