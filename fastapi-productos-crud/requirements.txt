@@ -1,0 +1,6 @@
+FastAPI
+uvicorn
+sqlalchemy
+pydantic
+asyncpg  # or mysqlclient, depending on your database choice
+databases
