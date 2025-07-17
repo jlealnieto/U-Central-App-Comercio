@@ -38,73 +38,18 @@
         <div class="row g-4">
 
             <!-- Registro de Clientes -->
-            <div class="col-md-4">
-                <div class="card nav-card shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Clientes</h5>
-                        <p class="card-text">Registrar, editar y ver listado de clientes.</p>
-                        <a href="{{ url_for('registrar_cliente') }}" class="btn btn-primary">Ir a Clientes</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Gestión de Productos -->
-            <div class="col-md-4">
-                <div class="card nav-card shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Productos</h5>
-                        <p class="card-text">Agregar y gestionar inventario de productos.</p>
-                        <a href="{{ url_for('lista_productos') }}" class="btn btn-success">Ir a Productos</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Registro de Ventas -->
-            <div class="col-md-4">
-                <div class="card nav-card shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Ventas</h5>
-                        <p class="card-text">Registrar nuevas ventas con uno o más productos.</p>
-                        <a href="{{ url_for('registrar_venta') }}" class="btn btn-info text-white">Registrar Venta</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reportes -->
-            <div class="col-md-4">
-                <div class="card nav-card shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Reportes</h5>
-                        <p class="card-text">Ver reportes de ventas y estadísticas del negocio.</p>
-                        <a href="{{ url_for('reportes') }}" class="btn btn-warning">Ver Reportes</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Compras a Proveedores -->
-            <div class="col-md-4">
-                <div class="card nav-card shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Compras</h5>
-                        <p class="card-text">Registrar compras realizadas a proveedores.</p>
-                        <a href="{{ url_for('registrar_compra') }}" class="btn btn-secondary">Registrar Compra</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Consulta de Stock -->
-            <div class="col-md-4">
-                <div class="card nav-card shadow-sm h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Stock</h5>
-                        <p class="card-text">Consultar disponibilidad actual de productos.</p>
-                        <a href="{{ url_for('consultar_stock') }}" class="btn btn-danger">Consultar Stock</a>
-                    </div>
-                </div>
-            </div>
-
+<div class="col-md-4">
+    <div class="card nav-card shadow-sm h-100">
+        <div class="card-body text-center">
+            <h5 class="card-title">Clientes</h5>
+            <p class="card-text">Registrar, editar y ver listado de clientes.</p>
+            <a href="{{ url_for('cliente.lista_clientes') }}" class="btn btn-outline-info w-100 mb-2">Ver Listado</a>
+            <a href="{{ url_for('cliente.registrar_cliente') }}" class="btn btn-primary w-100">Registrar Nuevo</a>
         </div>
     </div>
+</div>
+
+       
 
     <!-- Footer -->
     <footer class="mt-5 py-3 bg-light text-center">
