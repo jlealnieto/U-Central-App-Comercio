@@ -48,7 +48,20 @@
         </div>
     </div>
 </div>
+<!-- Gestión de Productos -->
+            <div class="col-md-4">
+                <div class="card nav-card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Productos</h5>
+                        <p class="card-text">Registrar, editar y ver inventario de productos.</p>
+                        <a href="{{ url_for('producto.lista_productos') }}" class="btn btn-outline-success w-100 mb-2">Ver Inventario</a>
+                        <a href="{{ url_for('producto.registrar_producto') }}" class="btn btn-success w-100">Registrar Nuevo Producto</a>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
        
 
     <!-- Footer -->

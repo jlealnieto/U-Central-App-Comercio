@@ -15,3 +15,16 @@ class Clientes(db.Model):
 
     def __repr__(self):
         return f'<Clientes {self.nombre}>'  
+    
+class Producto(db.Model):
+    __tablename__ = 'productos'
+    id_producto = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
+    descripcion = db.Column(db.Text)
+    precio = db.Column(db.Numeric(10, 2))
+    stock = db.Column(db.Integer)
+    categoria = db.Column(db.String(50))
+    imagen_gui = db.Column(db.Text)
+
+    def __repr__(self):
+        return f'<Producto {self.nombre}>'
